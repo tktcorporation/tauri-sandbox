@@ -1,0 +1,26 @@
+{
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"runArgs": [
+        // "--privileged" // Required if you need to run Electron apps
+        // "--network=host", // May fix networking for you
+        "--device=/dev/kvm" // Enables virtualization inside the container
+    ],
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"tamasfe.even-better-toml",
+				"tauri-apps.tauri-vscode",
+				"mhutchie.git-graph",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	}
+}
